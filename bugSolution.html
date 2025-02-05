@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    // Safer way to add a script to the DOM.
+    const newScript = document.createElement('script');
+    newScript.textContent = "alert('This alert is safe!');";
+    document.body.appendChild(newScript);
+  </script>
+</body>
+</html>
